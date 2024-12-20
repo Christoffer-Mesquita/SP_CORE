@@ -1,0 +1,125 @@
+name: SP_CORE
+version: '${project.version}'
+main: org.zerolegion.sp_core.SP_CORE
+api-version: '1.8'
+authors: [ZeroLegion]
+description: Core plugin for StellarPrison
+softdepend: [PlaceholderAPI]
+
+commands:
+  g:
+    description: Alterna entre chat local e global ou envia mensagem direta no global
+    usage: /g [mensagem]
+    aliases: [global]
+  sensitive:
+    description: Comandos administrativos do servidor
+    usage: |
+      §b❈ §3Sistema Administrativo §b❈
+      §b► §f/sensitive reload §7- Recarrega o SP_CORE
+      §b► §f/sensitive reload <plugin> §7- Recarrega um plugin específico
+      §b► §f/sensitive enable <plugin> §7- Ativa um plugin
+      §b► §f/sensitive disable <plugin> §7- Desativa um plugin
+      §b► §f/sensitive load <plugin> §7- Carrega um novo plugin
+    permission: sensitive.admin
+    permission-message: §c⚠ Você não possui autorização para executar este comando.
+    aliases: [s]
+  permissoes:
+    description: Sistema avançado de gerenciamento de permissões
+    usage: |
+      §b❈ §3Sistema de Permissões §b❈
+      §b► §f/permissoes group <nome> create <prefix> ������7- Criar grupo
+      §b► §f/permissoes group <nome> delete §7- Deletar grupo
+      §b► §f/permissoes group <nome> addperm <perm> §7- Adicionar permissão
+      §b► §f/permissoes group <nome> delperm <perm> §7- Remover permissão
+      §b► §f/permissoes group <nome> setprefix <prefix> §7- Definir prefix
+      §b► §f/permissoes player <player> addgroup <grupo> §7- Add ao grupo
+      §b► §f/permissoes player <player> removegroup <grupo> §7- Remover do grupo
+      §b► §f/permissoes player <player> addperm <perm> §7- Add permissão
+      §b► §f/permissoes player <player> delperm <perm> §7- Remover permissão
+      §b► §f/permissoes list groups §7- Listar grupos
+      §b► §f/permissoes list player <nome> §7- Info do jogador
+      §b► §f/permissoes list group <nome> §7- Info do grupo
+    permission: sensitive.permissions
+    permission-message: §c⚠ Você não possui autorização para executar este comando.
+    aliases: [perms]
+  clearchat:
+    description: Limpa o chat do servidor
+    usage: /clearchat [all/self]
+    permission: sensitive.clearchat
+    permission-message: §c⚠ Você não possui autorização para executar este comando.
+    aliases: [cc]
+  gm:
+    description: Altera o modo de jogo
+    usage: /gm <0/1/2/3> [jogador]
+    permission: sensitive.gamemode
+    permission-message: §c⚠ Você não possui autorização para executar este comando.
+  level:
+    description: Gerencia o nível dos jogadores
+    usage: /level <jogador> <nível>
+    permission: sensitive.level
+    permission-message: §c⚠ Você não possui autorização para executar este comando.
+  creditos:
+    description: Sistema de Créditos Estelares
+    aliases: [credits, money, coins, balance, bal]
+    usage: "§c/creditos [enviar/top] [jogador] [valor]"
+  nave:
+    description: Comandos do sistema de naves
+    aliases: [ship, ships, naves]
+    usage: "§cUso correto: /nave <loja/info/lista/combustivel/hangar>"
+  clan:
+    description: Comando principal do sistema de clãs
+    usage: /clan <subcomando>
+    aliases: [c]
+  craft:
+    description: Abre a bancada de crafting espacial
+    usage: /craft
+    aliases: [crafting, craftavancado]
+  spacecrafting:
+    description: Abre a interface de crafting espacial
+    usage: /spacecrafting
+    aliases: [sc, scraft]
+    permission: sp_core.crafting
+
+permissions:
+  sensitive.admin:
+    description: Permite usar comandos administrativos
+    default: op
+  sensitive.permissions:
+    description: Permite gerenciar permissões
+    default: op
+  sensitive.clearchat:
+    description: Permite limpar o chat
+    default: op
+  sensitive.gamemode:
+    description: Permite alterar o modo de jogo
+    default: op
+  command.gm:
+    description: Alias para sensitive.gamemode
+    default: op
+    children:
+      sensitive.gamemode: true
+  sensitive.level:
+    description: Permite gerenciar níveis dos jogadores
+    default: op
+  sp.creditos.admin:
+    description: Permite usar comandos administrativos de créditos
+    default: op
+  sp.clan.admin:
+    description: Permite usar comandos administrativos de clãs
+    default: op
+    children:
+      sp.clan.create: true
+      sp.clan.delete: true
+      sp.clan.manage: true
+  sp.clan.create:
+    description: Permite criar clãs
+    default: true
+  sp.clan.delete:
+    description: Permite deletar clãs
+    default: op
+  sp.clan.manage:
+    description: Permite gerenciar clãs
+    default: op
+  sp_core.crafting:
+    description: Permite usar o comando de crafting espacial
+    default: true

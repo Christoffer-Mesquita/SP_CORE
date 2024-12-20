@@ -1,0 +1,62 @@
+# Configurações do MongoDB
+mongodb:
+  uri: ""
+  database: ""
+
+# Configurações do Chat
+chat:
+  format: "&8[&r%prefix%&8] &7%player% &8» &f%message%"
+  default-prefix: "&7Membro"
+
+# Configurações da TabList
+tablist:
+  header:
+    - "&r"
+    - "&d&lSENSITIVE &f&lPRISON"
+    - "&7prison.sensitivemc.com"
+    - "&r"
+    - "&fBem-vindo ao servidor!"
+    - "&7Jogadores Online: &f{online}"
+    - "&r"
+  footer:
+    - "&r"
+    - "&dLoja: &floja.sensitivemc.com"
+    - "&dDiscord: &fdiscord.sensitivemc.com"
+    - "&r"
+    - "&7Rank up e torne-se o mais forte!"
+    - "&r"
+  teams:
+    admin:
+      prefix: "&4⚔ &c"
+      suffix: " &7[Admin]"
+    player:
+      prefix: "&7"
+      suffix: ""
+
+# Configurações do MOTD
+motd:
+  # Primeira linha do MOTD
+  line1:
+    enabled: true
+    text: "       &5&k:&d&l&nSensitive&5&k:&r &5✧ &d&ldiscord.sensitivemc.com"
+    right: ""
+  
+  # Segunda linha do MOTD
+  line2:
+    enabled: true
+    text: "&d✦ &f&lPrison Espacial &5&l» &d&lRankUP &5✦"
+    right: ""
+  
+  # Configurações de manutenção
+  maintenance:
+    enabled: false
+    line1: "&c&lMANUTENÇÃO"
+    line2: "&7Voltamos em breve!"
+    
+  # Configurações visuais
+  settings:
+    colors:
+      primary: "&5"
+      secondary: "&d"
+      text: "&f"
+      highlight: "&d"

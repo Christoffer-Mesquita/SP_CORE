@@ -1,0 +1,137 @@
+# Configuração das Naves
+ships:
+  # Naves de Mineração
+  miner_basic:
+    name: "§bNave Mineradora Básica"
+    type: MINING
+    purchasable: true
+    price: 25000
+    stats:
+      storage: 1000
+      mining_speed: 1.0
+      fuel_capacity: 100
+    description:
+      - "§7Uma nave básica para mineração espacial"
+      - "§7Ideal para iniciantes"
+      - ""
+      - "§fArmazenamento: §e1000"
+      - "§fVelocidade de Mineração: §e1.0x"
+      - "§fCapacidade de Combustível: §e100"
+  
+  miner_advanced:
+    name: "§bNave Mineradora Avançada"
+    type: MINING
+    purchasable: true
+    price: 75000
+    stats:
+      storage: 2500
+      mining_speed: 1.5
+      fuel_capacity: 200
+    description:
+      - "§7Uma nave avançada para mineração espacial"
+      - "§7Com maior capacidade e eficiência"
+      - ""
+      - "§fArmazenamento: §e2500"
+      - "§fVelocidade de Mineração: §e1.5x"
+      - "§fCapacidade de Combustível: §e200"
+
+  # Naves de Combate
+  fighter_basic:
+    name: "§cNave de Combate Básica"
+    type: COMBAT
+    purchasable: true
+    price: 50000
+    stats:
+      attack: 100
+      defense: 150
+      speed: 1.2
+      fuel_capacity: 150
+    description:
+      - "§7Uma nave básica de combate"
+      - "§7Equilibrada em ataque e defesa"
+      - ""
+      - "§fAtaque: §e100"
+      - "§fDefesa: §e150"
+      - "§fVelocidade: §e1.2x"
+      - "§fCapacidade de Combustível: §e150"
+
+  # Naves de Transporte
+  cargo_basic:
+    name: "§eNave de Transporte Básica"
+    type: TRANSPORT
+    purchasable: true
+    price: 35000
+    stats:
+      storage: 5000
+      speed: 0.8
+      fuel_efficiency: 1.2
+      fuel_capacity: 300
+    description:
+      - "§7Uma nave básica para transporte"
+      - "§7Grande capacidade de carga"
+      - ""
+      - "§fArmazenamento: §e5000"
+      - "§fVelocidade: §e0.8x"
+      - "§fEficiência de Combustível: §e1.2x"
+      - "§fCapacidade de Combustível: §e300"
+
+  # Naves Especiais (Não Compráveis)
+  stellar_explorer:
+    name: "§5✧ Explorador Estelar ✧"
+    type: SPECIAL
+    purchasable: false
+    stats:
+      storage: 10000
+      speed: 2.0
+      attack: 500
+      defense: 500
+      fuel_capacity: 1000
+      special_abilities:
+        - WARP_DRIVE
+        - CLOAKING
+    description:
+      - "§7Uma nave lendária de elite"
+      - "§7Apenas para os mais dedicados exploradores"
+      - ""
+      - "§fArmazenamento: §e10000"
+      - "§fVelocidade: §e2.0x"
+      - "§fAtaque: §e500"
+      - "§fDefesa: §e500"
+      - "§fCapacidade de Combustível: §e1000"
+      - ""
+      - "§6✧ Habilidades Especiais:"
+      - "§e• Motor de Dobra"
+      - "§e• Camuflagem"
+
+# Configurações de Combustível
+fuel:
+  basic:
+    name: "§7Combustível Básico"
+    price: 100
+    efficiency: 1.0
+  
+  premium:
+    name: "§bCombustível Premium"
+    price: 250
+    efficiency: 1.5
+  
+  experimental:
+    name: "§5Combustível Experimental"
+    price: 500
+    efficiency: 2.0
+
+# Configurações de Hangar
+hangar:
+  levels:
+    1:
+      name: "§7Hangar Básico"
+      price: 10000
+      max_ships: 2
+    2:
+      name: "§bHangar Avançado"
+      price: 25000
+      max_ships: 4
+    3:
+      name: "§6Hangar Elite"
+      price: 50000
+      max_ships: 6 
